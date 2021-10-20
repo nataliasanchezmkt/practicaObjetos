@@ -6,10 +6,10 @@ let auto={
     modelo:'207',
     encendido: true,
     turnOn:(estado)=> {if (estado=='on'|| estado=='ON'){
-        document.write(estado+'= Auto encendido')
+       auto.encendido=true
     } else{
         if (estado=='off'|| estado=='OFF')
-        {document.write(estado+'= Auto apagado')}
+        {auto.encendido=false}
         else
      {alert('Ingrese ON o OFF')}}
     }}
@@ -17,4 +17,5 @@ let auto={
 
 let estado= prompt('On or off?')
 
-auto.turnOn(estado)
+auto.turnOn(estado);
+document.write(auto.encendido)
